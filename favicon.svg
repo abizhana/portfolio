@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e89bb0"/>
+      <stop offset="50%" stop-color="#cf6b87"/>
+      <stop offset="100%" stop-color="#b85572"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="url(#pinkGrad)"/>
+  <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="central" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="700" fill="#ffffff" letter-spacing="-1">A</text>
+</svg>
