@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://abizhana.github.io/portfolio/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://abizhana.github.io/portfolio/ecommerce.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://abizhana.github.io/portfolio/property.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://abizhana.github.io/portfolio/ai-model.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://abizhana.github.io/portfolio/disaster-alert.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
