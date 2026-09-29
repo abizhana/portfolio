@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #251d23;
+  --paper: #faf6f8;
+  --pink-mild: #cf6b87;
+  --pink-hover: #bd5975;
+  --pink-soft: #fae8ee;
+  --alt-color: #6a6184;
+  --alt-soft: #f0edf7;
+  --muted: #6e636b;
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --border-pink: rgba(207, 107, 135, 0.28);
+  --border-alt: rgba(106, 97, 132, 0.26);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', Manrope, sans-serif;
+  min-height: 100vh;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 14% 12%, rgba(207, 107, 135, 0.16) 0, transparent 42%),
+    radial-gradient(circle at 86% 16%, rgba(106, 97, 132, 0.16) 0, transparent 44%),
+    radial-gradient(circle at 50% 88%, rgba(207, 107, 135, 0.14) 0, transparent 52%),
+    linear-gradient(135deg, #faf6f8, #fdf8fa, #f6f4fa);
+  background-size: 200% 200%;
+  animation: aurora 16s ease infinite;
+}
+
+@keyframes aurora {
+  50% { background-position: 100% 100%; }
+}
+
+nav, main, footer {
+  max-width: 1120px;
+  margin: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+nav {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-pink);
+  transition: all .2s ease;
+}
+
+.back:hover {
+  background: #fff;
+  color: var(--pink-mild);
+  transform: translateX(-3px);
+  box-shadow: 0 4px 12px rgba(207, 107, 135, 0.12);
+}
+
+.back:before {
+  content: '←';
+}
+
+.name {
+  font: 700 17px 'Space Grotesk', sans-serif;
+  color: var(--pink-mild);
+}
+
+.hero {
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.eyebrow {
+  font: 600 11px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+  color: var(--pink-mild);
+  text-transform: uppercase;
+}
+
+h1, .section-title {
+  font: 700 clamp(2.6rem, 5.5vw, 5.2rem)/.92 'Space Grotesk', sans-serif;
+  letter-spacing: -.08em;
+  margin: 15px 0 20px;
+  color: var(--ink);
+}
+
+.summary {
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.stack span {
+  font: 600 11px 'DM Mono', monospace;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-pink);
+  border-radius: 99px;
+  padding: 8px 14px;
+  color: var(--ink);
+  box-shadow: 0 2px 8px rgba(207, 107, 135, 0.06);
+}
+
+.stack span:nth-child(even) {
+  border-color: var(--border-alt);
+  color: var(--alt-color);
+}
+
+.art {
+  height: 345px;
+  border-radius: 26px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(207, 107, 135, 0.12);
+  background: linear-gradient(135deg, #faedf1, #f1eef8);
+  border: 1px solid var(--border-pink);
+}
+
+.art:before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -40px;
+  top: -45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.screen {
+  position: absolute;
+  inset: 40px 36px 30px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-pink);
+  border-radius: 18px;
+  box-shadow: 0 16px 28px rgba(207, 107, 135, 0.08);
+  padding: 22px;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e59fb1;
+}
+
+.dots i:nth-child(2) { background: #dec8cf; }
+.dots i:nth-child(3) { background: #a89fbf; }
+
+.screen h3 {
+  font: 700 27px/1 'Space Grotesk', sans-serif;
+  letter-spacing: -.06em;
+  margin: 30px 0 10px;
+  color: var(--ink);
+}
+
+.screen p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.tiles {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.tiles b {
+  width: 58px;
+  height: 45px;
+  border-radius: 10px;
+  background: #faedf1;
+}
+
+.tiles b:nth-child(2) { background: #f1eef8; }
+.tiles b:nth-child(3) { background: #f7e6eb; }
+
+.section {
+  padding: 75px 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.features, .files {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-pink);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(207, 107, 135, 0.06);
+}
+
+.feature:nth-child(even) {
+  border-color: var(--border-alt);
+}
+
+.feature b {
+  font: 700 19px 'Space Grotesk', sans-serif;
+  color: var(--ink);
+}
+
+.feature p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.files {
+  grid-template-columns: 1fr 1fr;
+}
+
+.file {
+  background: #251d23;
+  color: #f7eff3;
+  border-radius: 18px;
+  border: 1px solid rgba(207, 107, 135, 0.28);
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(37, 29, 35, 0.16);
+}
+
+.file-head {
+  padding: 14px 18px;
+  background: #342831;
+  font: 600 11px 'DM Mono', monospace;
+  color: #df97aa;
+  border-bottom: 1px solid rgba(207, 107, 135, 0.15);
+}
+
+.file pre {
+  padding: 20px;
+  min-height: 180px;
+  margin: 0;
+  font: 500 12px/1.7 'DM Mono', monospace;
+  white-space: pre-wrap;
+}
+
+.purple { color: #bcaed6; }
+.green { color: #9bc5b3; }
+.pink { color: #e59fb1; }
+
+footer {
+  padding: 38px 28px;
+  border-top: 1px solid rgba(207, 107, 135, 0.18);
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+@media (max-width: 760px) {
+  nav, main, footer { padding-left: 20px; padding-right: 20px; }
+  .hero, .features, .files { grid-template-columns: 1fr; }
+  .hero { padding: 45px 0; }
+  .art { height: 290px; order: -1; }
+  .screen { inset: 35px 24px 25px; }
+  .section { padding: 50px 0; }
+}
